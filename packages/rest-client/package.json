@@ -1,5 +1,5 @@
 {
-  "name": "@feathersjs/rest-client",
+  "name": "feathersjs-rest-client-base64",
   "description": "REST client services for different Ajax libraries",
   "version": "4.5.11",
   "homepage": "https://feathersjs.com",
@@ -18,11 +18,7 @@
     "type": "git",
     "url": "git://github.com/feathersjs/feathers.git"
   },
-  "author": {
-    "name": "Feathers contributors",
-    "email": "hello@feathersjs.com",
-    "url": "https://feathersjs.com"
-  },
+  "author": "Feathers contributors <hello@feathersjs.com> (https://feathersjs.com)",
   "contributors": [],
   "bugs": {
     "url": "https://github.com/feathersjs/feathers/issues"
@@ -43,7 +39,8 @@
     "test": "mocha --config ../../.mocharc.json"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "test"
   },
   "publishConfig": {
     "access": "public"
@@ -51,6 +48,7 @@
   "dependencies": {
     "@feathersjs/commons": "^4.5.11",
     "@feathersjs/errors": "^4.5.11",
+    "base64url": "^3.0.1",
     "qs": "^6.9.4"
   },
   "devDependencies": {
@@ -70,6 +68,5 @@
     "rxjs": "^6.6.3",
     "shx": "^0.3.3",
     "superagent": "^6.1.0"
-  },
-  "gitHead": "9b9f0f13387341bdd320f1e66feda828fca2c9f2"
+  }
 }

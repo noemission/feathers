@@ -1,4 +1,4 @@
-const qs = require('qs');
+const base64url = require('base64url');
 const { Unavailable } = require('@feathersjs/errors');
 const { _ } = require('@feathersjs/commons');
 const { stripSlashes } = require('@feathersjs/commons');
@@ -33,7 +33,7 @@ class Base {
 
   getQuery (query) {
     if (Object.keys(query).length !== 0) {
-      const queryString = qs.stringify(query);
+      const queryString = base64url(JSON.stringify(query));
 
       return `?${queryString}`;
     }
