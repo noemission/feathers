@@ -34,7 +34,7 @@ class Base {
 
   getQuery (query) {
     if (Object.keys(query).length !== 0) {
-      const queryString = base64url(gzipSync(JSON.stringify(query)).toString());
+      const queryString = base64url.encode(gzipSync(JSON.stringify(query)));
       return `?${queryString}`;
     }
 
