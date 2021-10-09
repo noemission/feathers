@@ -3,6 +3,7 @@ const { Unavailable } = require('@feathersjs/errors');
 const { _ } = require('@feathersjs/commons');
 const { stripSlashes } = require('@feathersjs/commons');
 const { convert } = require('@feathersjs/errors');
+const { gzipSync } = require('zlib');
 
 function toError (error) {
   if (error.code === 'ECONNREFUSED') {
@@ -33,8 +34,7 @@ class Base {
 
   getQuery (query) {
     if (Object.keys(query).length !== 0) {
-      const queryString = base64url(JSON.stringify(query));
-
+      const queryString = base64url(gzipSync(JSON.stringify(query)).toString());
       return `?${queryString}`;
     }
 

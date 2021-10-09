@@ -1,7 +1,7 @@
 {
   "name": "feathersjs-rest-client-base64",
   "description": "REST client services for different Ajax libraries",
-  "version": "4.5.11",
+  "version": "4.6.0",
   "homepage": "https://feathersjs.com",
   "main": "lib/index.js",
   "types": "index.d.ts",
